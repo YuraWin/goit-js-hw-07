@@ -34,3 +34,12 @@ li {
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+/* Task-06************************ */
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  margin: 10px;
+}

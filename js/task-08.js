@@ -5,12 +5,10 @@ const ref = {
   divBox: document.querySelector("#boxes"),
 };
 
-ref.btnRender.addEventListener("click", publicBoxes);
-ref.btnDestroy.addEventListener("click", destroyBoxes);
-
-function publicBoxes() {
+ref.btnRender.addEventListener("click", () => {
   createBoxes(ref.input.value);
-}
+});
+ref.btnDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   let string = "";
@@ -30,4 +28,5 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   ref.divBox.innerHTML = "";
+  ref.input.value = null;
 }
